@@ -6,14 +6,145 @@
     box-sizing: border-box;
 }
 
+li{
+    list-style-type: none;
+}
+
 // Assets
+
+
+// Header
+
+#navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    z-index: 2;
+
+    height: 100px;
+
+    background-color: white;
+
+    box-shadow: 4px 10px 20px rgba(0, 0, 0, .6);
+
+    img{
+        height: 100%;
+    }
+    
+    #link-container{
+        display: flex;
+        align-items: center;
+
+        #link-list{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 25px;
+        
+            height: 100%;
+
+            .link{
+                font-weight: bold;
+            
+                cursor: pointer;
+            
+                transition: all ease-in-out .1s;
+
+                &:hover{
+                    border-bottom: 3px solid  black;
+                
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}
+
+/* /Header */
+
+
+
+/* Main */
+
+#title{
+    margin-top: 30px;
+
+    text-align: center;
+
+    font-size: 4em;
+    font-weight: bold;
+}
 
 #card-container{
     display: flex;
     flex-flow: row wrap;
     gap: 30px;
 
+    margin: 60px auto;
+
+    width: 80%;
+
     .card{
         width: calc(100% / 5 - 30px / 6 * 5);
+
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, .6);
+
+        .movie-title{
+            text-align: center;
+
+            font-size: 1.2em;
+            font-weight: bold;
+        }
     }
 }
+
+
+/* /Main */
+
+
+
+
+/* Footer */
+
+#footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 20px;
+
+    height: 120px;
+
+    background-color: black;
+    
+    #social-container{
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+
+        i{
+            color: white;
+        
+            font-size: 1.4em;
+        
+            cursor: pointer;
+        
+            transition: all ease-in-out .2s;
+
+            &:hover{
+                transform: scale(1.6);
+            
+            }
+        }
+    }
+
+    #copyright{
+        color: grey;
+    
+        font-size: 0.8em;
+    }
+}
+
+/* /Footer */
