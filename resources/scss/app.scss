@@ -1,1 +1,19 @@
 @import '~bootstrap/scss/bootstrap';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// Assets
+
+#card-container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+
+    .card{
+        width: calc(100% / 5 - 30px / 6 * 5);
+    }
+}
